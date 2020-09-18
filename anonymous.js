@@ -18,7 +18,7 @@ client.on('message', message => {
         let channel = message.channel;
         let author = message.author;
         if(channel.type == 'dm'){
-            client.channels.cache.get(anonymous_channnels).send("" + (( author.id + base) % 1000000007) + "　:　" + msg);
+            client.channels.cache.get(anonymous_channnels).send("" + (( parseInt(author.id) + base) % 1000000007) + "　:　" + msg);
         }
    }
 });
